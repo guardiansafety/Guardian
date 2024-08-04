@@ -1,0 +1,29 @@
+/* src/LoadingSpinner.module.css */
+.loadingContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinnerOuter {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: var(--highlight-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinnerInner {
+  width: 40px;
+  height: 40px;
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--highlight-color);
+}

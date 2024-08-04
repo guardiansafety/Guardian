@@ -1,0 +1,89 @@
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.profileTitle {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profileForm {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  background: var(--secondary-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  background: var(--input-bg);
+  color: var(--text);
+
+}
+
+
+.formInput:focus {
+  border-color: var(--primary-color);
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.submitButton:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.submitButtonIcon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}

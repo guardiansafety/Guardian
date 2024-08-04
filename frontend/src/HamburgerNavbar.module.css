@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow-y: auto;
+  transform: translateX(100%);
+  box-sizing: border-box;
+}
+
+.menuList {
+  list-style-type: none;
+  padding: 80px 0 0;
+  margin: 0;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+.menuLink, .profileButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 15px 30px;
+  transition: background-color 0.3s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
+
+}
+
+.menuLink:hover, .profileButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menuLink svg, .profileButton svg {
+  font-size: 20px;
+}
+
+.menuLink span, .profileButton span {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.submenuContainer {
+  width: 100%;
+}
+
+.arrow {
+  transition: transform 0.3s;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.subMenu, .profileMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.subMenuItem, .profileMenu li {
+  margin: 0;
+}
+
+.subMenuLink, .profileLink, .logoutButton {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  padding: 12px 30px 12px 65px;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+
+}
+
+.subMenuLink:hover, .profileLink:hover, .logoutButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.profileContainer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+
+}
+
+.profile {
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.profileLink svg, .logoutButton svg {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.icon {
+  margin-right: 15px;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+  .hamburger {
+    display: none;
+  }
+}

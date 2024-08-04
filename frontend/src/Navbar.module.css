@@ -1,0 +1,133 @@
+.navbar {
+  background: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  box-shadow: var(--navbar-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.userInfo {
+  font-weight: bold;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.navLinksContainer {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+  transition: color var(--transition);
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.authButtonContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.authButton {
+  background: var(--button-gradient);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  box-shadow: var(--button-shadow);
+}
+
+.authButton:hover {
+  transform: translateY(-2px);
+}
+
+.authButtonLight {
+  background: var(--highlight-color);
+}
+
+.authButtonDark {
+  background: var(--secondary-highlight-color);
+}
+
+.themeToggle {
+  margin-left: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  width: 50px;
+  height: 24px;
+  border-radius: 12px;
+  position: relative;
+  background: var(--slider-bg);
+  transition: background var(--transition);
+}
+
+.slider.light {
+  background: #ffdd57;
+}
+
+.slider.dark {
+  background: #2c3e50;
+}
+
+.icon {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.slider.light .icon {
+  left: 2px;
+  color: #ffdd57;
+}
+
+.slider.dark .icon {
+  left: 28px;
+  color: #2c3e50;
+}

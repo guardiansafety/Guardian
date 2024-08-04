@@ -1,0 +1,194 @@
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  color: var(--landing-text-primary);
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out, filter 1s ease-out;
+  transform-origin: center center;
+}
+
+.landingPage.launching {
+  animation: launchAnimation 1s ease-out forwards;
+}
+
+@keyframes launchAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+.videoContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.769);
+  z-index: -2;
+}
+
+.header {
+  text-align: center;
+  z-index: 1;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0; /* Added padding to ensure enough space */
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  color: #ff8000; /* Cool orange color */
+  overflow: visible; /* Ensure overflow is visible */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #FFFFFF; /* White color for better contrast */
+  overflow: visible; /* Ensure overflow is visible */
+  margin-top: 0.5rem; /* Add some space between title and subtitle */
+}
+
+.title, .subtitle {
+  width: 100%;
+  text-align: center;
+  padding: 0 1rem; /* Added padding to ensure enough space */
+}
+
+.buttonWrapper {
+  z-index: 1;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.launchButton {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  color: var(--landing-text-primary);
+  background: var(--landing-accent-primary);
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.launchButton::before,
+.launchButton::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid var(--landing-accent-secondary);
+  border-radius: 50px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.launchButton::after {
+  animation: pulse 2s infinite;
+}
+
+.launchButton:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.launchButton:hover::after {
+  animation: none;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.launchButton span {
+  position: relative;
+  z-index: 1;
+  margin-left: 10px;
+}
+
+.launchButton .icon {
+  margin-right: 0.5rem;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+.bottomFade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
+  z-index: 1;
+}
+
+.bobbingArrow {
+  position: absolute;
+  bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--landing-text-primary);
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1000px) {
+  .title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .launchButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .bobbingArrow {
+    font-size: 1.5rem;
+  }
+}

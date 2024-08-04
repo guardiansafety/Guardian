@@ -1,0 +1,25 @@
+/* EmergencyMap.module.css */
+.mapContainer {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.popupContent {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.popupContent p {
+  margin: 5px 0;
+}
+
+.popupContent strong {
+  font-weight: bold;
+}
+
+.icon {
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+}
